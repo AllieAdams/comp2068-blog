@@ -1,9 +1,11 @@
 extends ../layouts/main.pug
 
 block globals
-    - const title = "about blog"
+  - title = "About My Blogging Platform"
 
 block content
-    h1#header= title
 
-    p.intro-text.second-class(data-attr="my value") It was a rainy day in pizzaville...
+  .container
+    .content
+      header
+        h1= title
