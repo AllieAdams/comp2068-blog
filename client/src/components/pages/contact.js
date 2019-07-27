@@ -1,5 +1,19 @@
 import React from "react";
 
+const cardStyle = {
+  boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+  transition: '0.3s',
+  width: '30%',
+  margin: '10px',
+  marginLeft:  'auto',
+  marginRight: 'auto'
+}
+
+const divSpace = {
+  padding: '10px'
+}
+
+
 function Contact () {
     return (        
 <div className="container">
@@ -10,17 +24,45 @@ function Contact () {
       </header>
       <div>
       <p>Should you have any reason to contact us please do so through the options below</p>
-      <ul>
-        <li>Email: dontemailus@hotmail.com</li>
-        <li>Phone: 1-800-don-tcall</li>
-        <li>Fax: 1-800-don-tfax</li>
-      </ul>
+      
       <div>
-      <div className="card">
-  <img src="adrien.png" alt="Avatar" style={{width: "100%"}} ></img>
-  <div className="card-container">
-    <h4><b>John Doe</b></h4> 
-    <p>Architect & Engineer</p> 
+      <div className="card" style={cardStyle}>
+        <div style={divSpace}>
+  <img src={require("./images/adrien.png")} alt="Adrien" style={{width: "100%"}} ></img>
+  <div className="cardcontainer">
+    <h4><b>Adrien French</b></h4> 
+    <p>Programmer</p> 
+    <ul>
+        <li>Email: Adrien.French@myGeorgian.ca</li>
+        <li>Phone: 1-800-adr-ienFl</li>
+      </ul>
+      </div>
+  </div>
+</div>
+<div className="card" style={cardStyle}>
+<div style={divSpace}>
+  <img src={require("./images/allie.png")} alt="Allie" style={{width: "100%"}} ></img>
+  <div className="cardcontainer">
+    <h4><b>Allie Adams</b></h4> 
+    <p>Programmer</p> 
+    <ul>
+        <li>Email: Allie.Adams@myGeorgian.ca</li>
+        <li>Phone: 1-800-all-ieAA</li>
+      </ul>
+      </div>
+  </div>
+</div>
+<div className="card" style={cardStyle}>
+<div style={divSpace}>
+  <img src={require("./images/bethany.png")} alt="Bethany" style={{width: "100%"}} ></img>
+  <div className="cardcontainer">
+    <h4><b>Bethany Belbin</b></h4> 
+    <p>Programmer</p> 
+    <ul>
+        <li>Email: Bethany.Belbin@myGeorgian.ca</li>
+        <li>Phone: 1-800-don-tcal</li>
+      </ul>
+      </div>
   </div>
 </div>
       </div>
