@@ -50,14 +50,23 @@ exports.update = (req, res) => {
   if (!req.isAuthenticated()) 
   return res.status(401).send({ error: "Not Authenticated" });
 
+  console.log(req.body, req.session.userId);
+
+  Blog.find({_id: req.body.id, author: req.session.userId}).then(blog => console.log(blog)).catch(err => console.log(err));
+
   Blog.updateOne({
       _id: req.body.id,
       author: req.session.userId
     }, req.body.blog, {
       runValidators: true
     })
-    .then(() => res.status(200).send({success: "Blog updated successfully"}))
-    .catch(err => res.status(404).send(err));
+    .then(() => {
+      res.status(200).send({success: "Blog updated successfully"});
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(404).send(err)
+    });
 };
 
 

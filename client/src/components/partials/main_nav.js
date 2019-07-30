@@ -11,6 +11,16 @@ function MainNav () {
             <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blogs</a>
+            <div className="dropdown-menu">
+              <Link className="dropdown-item" to="/blogs">Blogs</Link>
+              <Link className="dropdown-item" to="/blogs/new">New Blog</Link>
+            </div>
+            </li>
+            <li className="nav-item"><Link className="nav-link" to="/login">Login</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/logout">Logout</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/register">Register</Link></li>
           </ul>
         </div>
       </nav>
